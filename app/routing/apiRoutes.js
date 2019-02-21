@@ -1,13 +1,11 @@
-require("../../server");
-
 var friendsData = require("../data/friends");
 
-module(function(app) {
-    app.get("/api/friends", function(req, res) {
+module.exports = function (app) {
+    app.get("/api/friends", function (req, res) {
         res.json(friendsData);
     });
 
-    app.post("/api/friends", function(req, res) {
+    app.post("/api/friends", function (req, res) {
         res.json(true);
     });
-});
+};
